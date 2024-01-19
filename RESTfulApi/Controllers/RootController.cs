@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RESTfulApi.Controllers
 {
     [Route("/")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class RootController : ControllerBase
     {
         [HttpGet(Name = nameof(GetRoot))]
